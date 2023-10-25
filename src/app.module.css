@@ -1,0 +1,26 @@
+.wrapper {
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 16rem 1fr; /*1fr indica que o main se ajustará ao espaço disponível*/
+    gap: 2rem;
+    align-items: flex-start; /*(padrão stretch) Alinha ao topo Evita que a Aside Bar seja forçada a ficar com o tamanho do main*/
+}
+
+@media(max-width: 768px) {
+
+    html {
+        font-size: 87.5%;
+    } 
+    /*Torna o padrão de fonte do HTML de 16 para 14, e como, utilizamos REM, se a fonte diminui o tamanho dos elementos também diminuem
+      E se 16px é 100%, 87.5% é 14px
+    */
+    
+
+
+    .wrapper {
+        grid-template-columns: 1fr; /*T elas mobile o Grid possuirá 1 coluna. o 1fr indica que ela se encaixará no espaço disponível*/
+    }
+}
